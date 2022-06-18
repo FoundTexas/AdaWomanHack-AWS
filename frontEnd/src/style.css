@@ -1,0 +1,8 @@
+.drawerPaper {
+  width: "inherit";
+}
+
+.link {
+  text-decoration: none;
+  color: theme.palette.text.primary;
+}

@@ -1,0 +1,99 @@
+.AgentInfoI {
+    padding-top: 0%;
+    padding-left: 5%;
+    margin-left: 1%;
+}
+
+.AgentPageI .AgentInfoI h1 {
+    font-size: x-large;
+    padding-top: 1%;
+    padding-bottom: 0.5%;
+    padding-left: 0;
+    margin: 0;
+    font-weight: bold;
+}
+
+.AgentPageI .AgentInfoI h2 {
+    font-size: larger;
+    font-weight: normal;
+    padding-top: 0.5%;
+    padding-left: 0;
+    padding-bottom: 0.5%;
+    margin: 0;
+}
+
+
+
+.WrapperChartsI{
+    background-color: #eee;
+    width: 160%;
+    padding: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5%;
+}
+
+
+
+.WrapperChartI{
+   
+    width: max-content;
+    background-color: white;
+    margin: 1%;
+    margin-bottom: 10%;
+}
+
+.bar-chartI{
+    flex-basis: 100%;
+    height: 500px;
+    min-width: 0;
+}
+
+.donut-chartI{
+    flex-basis: 100%;
+    height: 500px;
+    min-width: 0;
+}
+
+.line-chartI{
+    flex-basis: 100%;
+    height: 500px;
+    min-width: 0;
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .WrapperChartsI{
+        background-color: #eee;
+        width: 160%;
+        padding: 1%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 5%;
+    }
+
+    .bar-chartI{
+        flex-basis: 45%;
+        height: 400px;
+        min-width: 0;
+    }
+    
+    .donut-chartI{
+        flex-basis: 45%;
+        height: 400px;
+        min-width: 0;
+    }
+    
+    .line-chartI{
+        flex-basis: 100%;
+        height: 500px;
+        min-width: 0;
+    }
+    
+
+}
