@@ -21,7 +21,6 @@ public class UserController {
     @GetMapping("/all")
     public ResponseEntity<Iterable<User>> getAll(){
 
-        System.out.println(userService.getUsers().iterator().next());
         return ResponseEntity.ok(userService.getUsers());
     }
 
@@ -37,7 +36,29 @@ public class UserController {
         return ResponseEntity.ok(userService.updateUser(user));
     }
 
+    @PostMapping("/friend")
+    public ResponseEntity<User> friend(@RequestBody User user) throws Exception
+    {
+        return ResponseEntity.ok(userService.makefriendship(user));
+    }
 
+    @PostMapping("/findfriends")
+    public ResponseEntity<Iterable<User>> getfriends(@RequestBody Map<String,String> data){
 
+        return ResponseEntity.ok(userService.getfriends(data.get("userID")));
+    }
+
+    @PostMapping("/user")
+    public ResponseEntity<User> getuser(@RequestBody Map<String,String> data){
+
+        return ResponseEntity.ok(userService.getOne(data.get("userID")));
+    }
+
+    @PostMapping("/signin")
+    public ResponseEntity<Boolean> SignIn (@RequestBody Map<String,String> data){
+
+        
+        return ResponseEntity.ok(userService.SignIn(data.get("password"),data.get("userID")));
+    }
 
 }

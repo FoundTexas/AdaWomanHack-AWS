@@ -10,7 +10,6 @@ public class User {
     private String friendID;
     private String last_update;
     private String password;
-    private String username;
     private String phone;
     private String name;
     private Integer risk;
@@ -18,9 +17,7 @@ public class User {
     private Set<String> final_position;
     private Set<String> risk_position;
     private Boolean traveling;
-
-    
-
+    private String friendship_date;
 
     @DynamoDbPartitionKey
     @DynamoDbAttribute("userID")
@@ -58,14 +55,6 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
     }
 
     public Integer getRisk() {
@@ -122,5 +111,13 @@ public class User {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getFriendship_date() {
+        return friendship_date;
+    }
+
+    public void setFriendship_date(String friendship_date) {
+        this.friendship_date = friendship_date;
     }
 }

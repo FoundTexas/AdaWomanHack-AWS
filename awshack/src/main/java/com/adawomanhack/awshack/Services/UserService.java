@@ -28,4 +28,21 @@ public class UserService {
         userRepository.save(user);
         return user;
     }
+
+    public User makefriendship(User user) {
+        userRepository.save(user);
+        return user;
+    }
+
+    public Iterable<User> getfriends(String userid) {
+        return userRepository.findFriends(userid);
+    }
+
+    public User getOne(String userid){
+        return userRepository.getOne(userid);
+    }
+
+    public Boolean SignIn(String password, String userid){
+        return userRepository.SignIn(password,userid);
+    }
 }
