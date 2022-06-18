@@ -80,13 +80,13 @@ public class UserRepository {
         return list;
     }
 
-    public Boolean SignIn (String password, String userid){
+    public User SignIn (String password, String userid){
         User user = getOne(userid);
 
         if (Objects.equals(user.getPassword(), password)){
-            return Boolean.TRUE;
+            return user;
         }
-        else return Boolean.FALSE;
+        else return null;
     }
 
 }

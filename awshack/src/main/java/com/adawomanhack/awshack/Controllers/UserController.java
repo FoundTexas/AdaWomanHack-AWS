@@ -55,7 +55,7 @@ public class UserController {
     }
 
     @PostMapping("/signin")
-    public ResponseEntity<Boolean> SignIn (@RequestBody Map<String,String> data){
+    public ResponseEntity<User> SignIn (@RequestBody Map<String,String> data){
 
         
         return ResponseEntity.ok(userService.SignIn(data.get("password"),data.get("userID")));

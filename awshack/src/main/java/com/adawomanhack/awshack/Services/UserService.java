@@ -42,7 +42,7 @@ public class UserService {
         return userRepository.getOne(userid);
     }
 
-    public Boolean SignIn(String password, String userid){
+    public User SignIn(String password, String userid){
         return userRepository.SignIn(password,userid);
     }
 }
